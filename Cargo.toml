@@ -1,0 +1,13 @@
+[package]
+name = "bonez_server"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "bonez"
+path = "src/main.rs"
+
+[dependencies]
+nix = "0.23.1"
+num_cpus = "1.13.1"
+mime_guess = "2.0.3"

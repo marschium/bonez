@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'bonez_server'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=bonez",
+                    "--package=bonez_server"
+                ],
+                "filter": {
+                    "name": "bonez",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "-v"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'bonez_server'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=bonez",
+                    "--package=bonez_server"
+                ],
+                "filter": {
+                    "name": "bonez",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
